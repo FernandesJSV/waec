@@ -327,7 +327,7 @@ const sendDialog = async (
 
         const buttonMessage = {
           text: `\u200e${choosenQueue.greetingMessage}`,
-          buttons:  buttons,
+          buttons,
           headerType: 1
         };
 
@@ -452,7 +452,7 @@ const backToMainMenu = async (
 
     const buttonMessage = {
       text: formatBody(`\u200e${greetingMessage}`, ticket),
-      buttons: buttons,
+      buttons,
       headerType: 1
     };
 

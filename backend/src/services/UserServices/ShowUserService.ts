@@ -3,7 +3,7 @@ import AppError from "../../errors/AppError";
 import Queue from "../../models/Queue";
 import Company from "../../models/Company";
 import Plan from "../../models/Plan";
-import Whatsapp from "../../models/Whatsapp";
+
 const ShowUserService = async (id: string | number): Promise<User> => {
   const user = await User.findByPk(id, {
     attributes: [
@@ -14,7 +14,6 @@ const ShowUserService = async (id: string | number): Promise<User> => {
       "profile",
       "super",
       "tokenVersion",
-      "whatsappId",
       "online",
       "startWork",
       "endWork",
@@ -22,7 +21,6 @@ const ShowUserService = async (id: string | number): Promise<User> => {
     ],
     include: [
       { model: Queue, as: "queues", attributes: ["id", "name", "color"] },
-      { model: Whatsapp, as: "whatsapp", attributes: ["id", "name"] },
       {
         model: Company,
         as: "company",

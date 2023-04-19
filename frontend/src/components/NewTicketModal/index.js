@@ -20,7 +20,6 @@ import toastError from "../../errors/toastError";
 import { AuthContext } from "../../context/Auth/AuthContext";
 import { Grid, ListItemText, MenuItem, Select } from "@material-ui/core";
 import { toast } from "react-toastify";
-import useWhatsApps from "../../hooks/useWhatsApps";
 
 const filter = createFilterOptions({
 	trim: true,
@@ -33,7 +32,6 @@ const NewTicketModal = ({ modalOpen, onClose, initialContact }) => {
 	const [searchParam, setSearchParam] = useState("");
 	const [selectedContact, setSelectedContact] = useState(null);
 	const [selectedQueue, setSelectedQueue] = useState("");
-	const [selectedWhatsapp, setSelectedWhatsapp] = useState("");
 	const [newContact, setNewContact] = useState({});
 	const [contactModalOpen, setContactModalOpen] = useState(false);
 	const { user } = useContext(AuthContext);
@@ -82,18 +80,12 @@ const NewTicketModal = ({ modalOpen, onClose, initialContact }) => {
 			toast.error("Selecione uma fila");
 			return;
 		}
-		if (selectedWhatsapp === "" && user.profile !== 'admin') {
-			toast.error("Selecione um whatsapp");
-			return;
-		}
 		setLoading(true);
 		try {
 			const queueId = selectedQueue !== "" ? selectedQueue : null;
-			const whatsappId = selectedWhatsapp !== "" ? selectedWhatsapp : null;
 			const { data: ticket } = await api.post("/tickets", {
 				contactId: contactId,
 				queueId,
-				whatsappId,
 				userId: user.id,
 				status: "open",
 			});
@@ -248,43 +240,7 @@ const NewTicketModal = ({ modalOpen, onClose, initialContact }) => {
 										</MenuItem>
 									))}
 							</Select>
-					</Grid>
-					<Grid xs={12} item>
-						<Select
-							fullWidth
-							displayEmpty
-							variant="outlined"
-							value={selectedWhatsapp}
-							onChange={(e) => {
-								setSelectedWhatsapp(e.target.value)
-							}}
-							MenuProps={{
-								anchorOrigin: {
-									vertical: "bottom",
-									horizontal: "left",
-								},
-								transformOrigin: {
-									vertical: "top",
-									horizontal: "left",
-								},
-								getContentAnchorEl: null,
-							}}
-							renderValue={() => {
-								if (selectedWhatsapp === "") {
-									return "Selecione um whatsapp"
-								}
-								const whatsapp = user.WhatsApps.find(w => w.id === selectedWhatsapp)
-								return whatsapp.name
-							}}
-						>
-							{user.whatsApps?.length > 0 &&
-								user.whatsApps.map((whatsapp, key) => (
-									<MenuItem dense key={key} value={whatsapp.id}>
-										<ListItemText primary={whatsapp.name} />
-									</MenuItem>
-								))}
-						</Select>
-					</Grid>
+						</Grid>
 					</Grid>
 				</DialogContent>
 				<DialogActions>

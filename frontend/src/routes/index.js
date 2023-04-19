@@ -77,9 +77,9 @@ const Routes = () => {
                 {/* <Route exact path="/integrations" component={Integrations} isPrivate /> */}
                 {/* <Route exact path="/integrations/hinova" component={MikWebComponent} isPrivate /> */}
                 {/* <Route exact path="/integrations/siprov" component={MikWebComponent} isPrivate /> */}
-                {/* <Route exact path="/integrations/mikweb" component={MikWebComponent} isPrivate />
-                <Route exact path="/integrations/asaas" component={MikWebComponent} isPrivate />
-                <Route exact path="/integrations/bling" component={MikWebComponent} isPrivate /> */}
+                {/* <Route exact path="/integrations/mikweb" component={MikWebComponent} isPrivate /> */}
+                {/* <Route exact path="/integrations/asaas" component={MikWebComponent} isPrivate /> */}
+                {/* <Route exact path="/integrations/bling" component={MikWebComponent} isPrivate /> */}
 
                 {showCampaigns && (
                   <>
