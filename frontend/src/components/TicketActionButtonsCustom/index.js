@@ -431,14 +431,14 @@ const TicketActionButtonsCustom = ({ ticket }) => {
                                 <DialogActions className={classes.botoes}>
                                     <Button
                                         onClick={e => handleCloseTicketWithoutFarewellMsg()}
-                                        style={{ background: "#0071c1", color: "white" }}
+                                        style={{ background: "#9200bf", color: "white" }}
                                     >
                                         {i18n.t("messagesList.header.dialogRatingWithoutFarewellMsg")}
                                     </Button>
 
                                     <Button
                                         onClick={e => handleUpdateTicketStatus(e, "closed", user?.id, ticket?.queue?.id)}
-                                        style={{ background: "#0071c1", color: "white" }}
+                                        style={{ background: "#9200bf", color: "white" }}
                                     >
                                         {i18n.t("messagesList.header.dialogRatingCancel")}
                                     </Button>
@@ -448,7 +448,7 @@ const TicketActionButtonsCustom = ({ ticket }) => {
                                             disabled={isSubmitting}
                                             variant="contained"
                                             type="submit"
-                                            style={{ background: "#0071c1", color: "white" }}
+                                            style={{ background: "#9200bf", color: "white" }}
                                         >
                                             {i18n.t("messagesList.header.dialogRatingSuccess")}
                                         </Button>

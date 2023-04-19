@@ -115,7 +115,7 @@ export const initWbot = async (whatsapp: Whatsapp): Promise<Session> => {
         wsocket = makeWASocket({
           logger: loggerBaileys,
           printQRInTerminal: true,
-          browser: [process.env.BROWSER_CLIENT || "Chat2one", process.env.BROWSER_NAME || "Chrome", process.env.BROWSER_VERSION || "10.0"],
+          browser: [process.env.BROWSER_CLIENT || "WaZap", process.env.BROWSER_NAME || "Chrome", process.env.BROWSER_VERSION || "10.0"],
           auth: state as AuthenticationState,
           version,
           defaultQueryTimeoutMs: 60_000,

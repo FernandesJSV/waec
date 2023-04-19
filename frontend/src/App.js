@@ -50,9 +50,9 @@ const App = () => {
             },
             palette: {
                 type: mode,
-                primary: { main: "#0071c1" },
-                textPrimary: mode === "light" ? "#0071c1" : "#FFFFFF",
-                borderPrimary: mode === "light" ? "#0071c1" : "#FFFFFF",
+                primary: { main: "#9200bf" },
+                textPrimary: mode === "light" ? "#9200bf" : "#FFFFFF",
+                borderPrimary: mode === "light" ? "#9200bf" : "#FFFFFF",
                 dark: { main: mode === "light" ? "#333333" : "#F3F3F3" },
                 light: { main: mode === "light" ? "#F3F3F3" : "#333333" },
                 tabHeaderBackground: mode === "light" ? "#EEE" : "#666",
@@ -61,7 +61,7 @@ const App = () => {
                 total: mode === "light" ? "#fff" : "#222",
                 messageIcons: mode === "light" ? "grey" : "#F3F3F3",
                 inputBackground: mode === "light" ? "#FFFFFF" : "#333",
-                barraSuperior: "#34bcff"
+                barraSuperior: "#8709ae"
             },
             mode,
         },

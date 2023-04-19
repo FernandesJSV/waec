@@ -60,7 +60,7 @@ body{
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid #0071c1;
+    border-bottom: 2px solid #9200bf;
 }
 
 .login-content .input-div.one{
@@ -68,7 +68,7 @@ body{
 }
 
 .i{
-	color: #0071c1;
+	color: #9200bf;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -99,7 +99,7 @@ body{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: #0071c1;
+	background-color: #9200bf;
 	transition: .4s;
 }
 
@@ -121,7 +121,7 @@ body{
 }
 
 .input-div.focus > .i > i{
-	color: #0071c1;
+	color: #9200bf;
 }
 
 .input-div > div > input{
@@ -153,7 +153,7 @@ body{
 } */
 
 a:hover{
-	color: #0071c1;
+	color: #9200bf;
 }
 
 .btn{
@@ -163,7 +163,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #0071c1, #0071c1, #0071c1);
+	background-image: linear-gradient(to right, #9200bf, #9200bf, #9200bf);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;

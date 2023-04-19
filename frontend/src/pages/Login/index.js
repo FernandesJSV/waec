@@ -15,7 +15,7 @@ import { i18n } from "../../translate/i18n";
 
 import { AuthContext } from "../../context/Auth/AuthContext";
 
-import wave from '../../assets/wave.png'
+// import wave from '../../assets/wave.png'
 import bg from '../../assets/bg.svg'
 // import avatar from '../../assets/avatar.svg'
 import logo from '../../assets/logo.png';
@@ -37,7 +37,7 @@ const Login = () => {
 
     return (
         <>
-            <img className="wave" src={wave} />
+            {/* <img className="wave" src={wave} /> */}
             <div className="container">
                 <div className="img">
                     <img src={bg} />

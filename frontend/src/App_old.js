@@ -37,9 +37,9 @@ const App = () => {
       },
       padding: "2px",
       palette: {
-        primary: { main: "#0071c1" },
+        primary: { main: "#9200bf" },
         secondary: { main: "#737373" },
-        third: { main: "#34bcff" },
+        third: { main: "#8709ae" },
         fourth: { main: "#fffedf" }
       },
       barraSuperior: {
@@ -47,14 +47,14 @@ const App = () => {
         secondary: { main: "#ffffff" },
       },
       barraLateral: {
-        primary: { main: "#34bcff" },
+        primary: { main: "#8709ae" },
       },
       icons: {
-        primary: { main: "#0071c1" }
+        primary: { main: "#9200bf" }
       },
       textColorMenu: {
         primary: { main: "#ffffff" },
-        secondary: { main: "#0071c1" }
+        secondary: { main: "#9200bf" }
       },
       contadorConversas: {
         primary: { main: "#f05d67" }
